@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <regex>
+    <string>
+      \\b(http)([^ ]*)|\r\n|\r|\n|(, Bishop International Airport, MI)|(, Detroit Metropolitan Wayne County Airport, MI)|(, Oakland County International Airport, MI)|\n
+    </string>
+  </regex>
+  <topspeed>
+    <string>
+      11
+    </string>
+  </topspeed>
+  <bottomspeed>
+    <string>
+      14
+    </string>
+  </bottomspeed>
+</settings>

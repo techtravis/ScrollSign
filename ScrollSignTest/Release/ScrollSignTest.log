@@ -1,0 +1,12 @@
+﻿  VisualGDB: Sending 1 updated source file to build machine...
+  VisualGDB: Run "make CONFIG=Release" in directory "/tmp/VisualGDB/e/raspberrypi/ScrollSignTest/ScrollSignTest" on pi@raspberrypi (SSH)
+  mkdir Release
+  g++ -Wall -O3 -g -std=c++11  -I/home/pi/led-matrix/include -I/home/pi/Downloads/pugixml-1.8/src -I/usr/include -DNDEBUG=1 -DRELEASE=1   -c ScrollSignTest.cpp -o Release/ScrollSignTest.o -MD -MF Release/ScrollSignTest.dep
+  ScrollSignTest.cpp: In function `void displayFeeds(rgb_matrix::RGBMatrix*&, int, std::string)':
+E:\raspberrypi\ScrollSignTest\ScrollSignTest\ScrollSignTest.cpp(264,36): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+          for (int w = 0; (unsigned)w < canvas->width(); w++)
+                                      ^
+E:\raspberrypi\ScrollSignTest\ScrollSignTest\ScrollSignTest.cpp(272,36): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+          for (int w = 0; (unsigned)w < canvas->width(); w++)
+                                      ^
+  g++ -o Release/ScrollSignTest -L/home/pi/led-matrix/lib -lrgbmatrix -lrt -lm -lpthread   -L/home/pi/led-matrix/lib -Wl,--start-group Release/ScrollSignTest.o -lrgbmatrix  -Wl,--rpath='$ORIGIN'  -lcurl   -Wl,--end-group

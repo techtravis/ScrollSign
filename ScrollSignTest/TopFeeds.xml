@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feeds>
+  <item>
+    <url>https://www.fark.com/fark.rss</url>
+  </item>
+  <item>
+    <url>https://www.history.com/.rss/full/this-day-in-history</url>
+  </item>
+  <!--<item>
+    <url>https://www.wired.com/feed</url>
+  </item>
+  <item>
+    <url>http://feeds.reuters.com/Reuters/domesticNews</url>
+  </item>-->
+</feeds>

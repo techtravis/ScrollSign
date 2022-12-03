@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feeds>
+  <item>
+    <url>https://w1.weather.gov/xml/current_obs/KFNT.rss</url>
+  </item>
+  <!--<item>
+    <url>https://w1.weather.gov/xml/current_obs/KDTW.rss</url>
+  </item>-->
+  <item>
+    <url>https://w1.weather.gov/xml/current_obs/KPTK.rss</url>
+  </item>
+  <item>
+    <url>http://rss.kardsen.com/Rss.aspx</url>
+  </item>
+</feeds>
+
+
