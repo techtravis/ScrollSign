@@ -13,7 +13,7 @@ OBJCOPY := objcopy
 
 #Additional flags
 PREPROCESSOR_MACROS := DEBUG=1
-INCLUDE_DIRS := /home/pi/Libraries/lib-rgbmatrix/include /home/pi/Libraries/pugixml-1.8/src /usr/include
+INCLUDE_DIRS := /home/pi/Libraries/lib-rgbmatrix/include /home/pi/Libraries/pugixml-1.8/src /usr/include /usr/include/arm-linux-gnueabihf lib-rgbmatrix/include
 LIBRARY_DIRS := /home/pi/Libraries/lib-rgbmatrix/lib /home/pi/Libraries/pugixml-1.8/src
 LIBRARY_NAMES := rgbmatrix
 ADDITIONAL_LINKER_INPUTS := 

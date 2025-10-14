@@ -35,7 +35,7 @@ error:
 	$(error Invalid configuration, please check your inputs)
 endif
 
-SOURCEFILES := ScrollSignTest.cpp
+SOURCEFILES := AnimationStrategies.cpp MessageSources.cpp ScrollSignTest.cpp
 EXTERNAL_LIBS := 
 EXTERNAL_LIBS_COPIED := $(foreach lib, $(EXTERNAL_LIBS),$(BINARYDIR)/$(notdir $(lib)))
 
@@ -120,7 +120,18 @@ ifeq ($(PRIMARY_OUTPUTS),)
 PRIMARY_OUTPUTS := $(BINARYDIR)/$(TARGETNAME)
 endif
 
-all: $(PRIMARY_OUTPUTS)
+# Resource files copied to $(BINARYDIR)/Configs after build
+RESOURCE_FILES := TopFeeds.xml BottomFeeds.xml TopLines.xml BottomLines.xml Settings.xml
+CONFIGS_DIR := $(BINARYDIR)/Configs
+
+.PHONY: copy_resources
+copy_resources: $(PRIMARY_OUTPUTS)
+	@echo Copying resource XML files to $(CONFIGS_DIR)
+	@mkdir -p $(CONFIGS_DIR)
+	@cp -u $(RESOURCE_FILES) $(CONFIGS_DIR)/ 2>/dev/null || true
+
+# Default target now also copies resources
+all: $(PRIMARY_OUTPUTS) copy_resources
 
 $(BINARYDIR)/$(basename $(TARGETNAME)).bin: $(BINARYDIR)/$(TARGETNAME)
 	$(OBJCOPY) -O binary $< $@

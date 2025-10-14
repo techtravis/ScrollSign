@@ -35,7 +35,7 @@ error:
 	$(error Invalid configuration, please check your inputs)
 endif
 
-SOURCEFILES := lib-feedreader/src/Curl.cpp lib-feedreader/src/Entry.cpp lib-feedreader/src/Feed.cpp lib-feedreader/src/FeedConfig.cpp lib-feedreader/src/MemParseHandlers.cpp lib-feedreader/src/StdAfx.cpp lib-feedreader/src/Utils.cpp lib-feedreader/src/Validator.cpp lib-feedreader/src/XmlGlobalState.cpp ScrollSignTest.cpp
+SOURCEFILES := ScrollSignTest.cpp MessageSources.cpp
 EXTERNAL_LIBS := 
 EXTERNAL_LIBS_COPIED := $(foreach lib, $(EXTERNAL_LIBS),$(BINARYDIR)/$(notdir $(lib)))
 
@@ -179,40 +179,3 @@ $(BINARYDIR)/%.o : %.cxx $(all_make_files) |$(BINARYDIR)
 	$(CC) $(CFLAGS) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
 
 #VisualGDB: GeneratedRules				#<--- All lines below are auto-generated. Remove this line to suppress auto-generation of file rules.
-
-
-$(BINARYDIR)/Curl.o : lib-feedreader/src/Curl.cpp $(all_make_files) |$(BINARYDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
-
-
-$(BINARYDIR)/Entry.o : lib-feedreader/src/Entry.cpp $(all_make_files) |$(BINARYDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
-
-
-$(BINARYDIR)/Feed.o : lib-feedreader/src/Feed.cpp $(all_make_files) |$(BINARYDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
-
-
-$(BINARYDIR)/FeedConfig.o : lib-feedreader/src/FeedConfig.cpp $(all_make_files) |$(BINARYDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
-
-
-$(BINARYDIR)/MemParseHandlers.o : lib-feedreader/src/MemParseHandlers.cpp $(all_make_files) |$(BINARYDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
-
-
-$(BINARYDIR)/StdAfx.o : lib-feedreader/src/StdAfx.cpp $(all_make_files) |$(BINARYDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
-
-
-$(BINARYDIR)/Utils.o : lib-feedreader/src/Utils.cpp $(all_make_files) |$(BINARYDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
-
-
-$(BINARYDIR)/Validator.o : lib-feedreader/src/Validator.cpp $(all_make_files) |$(BINARYDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
-
-
-$(BINARYDIR)/XmlGlobalState.o : lib-feedreader/src/XmlGlobalState.cpp $(all_make_files) |$(BINARYDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -MD -MF $(@:.o=.dep)
-
